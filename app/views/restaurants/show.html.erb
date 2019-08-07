@@ -3,6 +3,12 @@
   <p><%= @restaurant.address %></p>
   <p><%= @restaurant.category %></p>
 
+  <ul>
+    <% @reviews.each do |review| %>
+      <li><%= review.content %>(Rating: <%= review.rating %>)</li>
+    <% end %>
+  </ul>
+
   <%= link_to 'Add a review', new_restaurant_review_path(@restaurant) %>
 
   <%= link_to 'Get back to list', restaurants_path %>
