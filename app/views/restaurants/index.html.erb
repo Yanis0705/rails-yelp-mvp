@@ -1,7 +1,9 @@
-<h1>List of restaurant</h1>
+<div class="container">
+  <h1>List of restaurant</h1>
 
-<%= link_to 'Add a new restaurant', new_restaurant_path %>
+  <%= link_to 'Add a new restaurant', new_restaurant_path %>
 
-<% @restaurants.each do |restaurant| %>
-<h2><%= link_to restaurant.name, restaurant_path(restaurant) %></h2>
-<% end %>
+  <% @restaurants.each do |restaurant| %>
+  <h2><%= link_to restaurant.name, restaurant_path(restaurant) %></h2>
+  <% end %>
+</div>
