@@ -8,6 +8,10 @@ class RestaurantsController < ApplicationController
   def show
   end
 
+  def new
+    @restaurant = Restaurant.new
+  end
+
   private
 
   def set_restaurant
